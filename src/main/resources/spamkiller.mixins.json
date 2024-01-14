@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "package": "cc.maxng.spamkiller.mixin",
+  "mixins": [
+    "EntityMixin"
+  ],
+  "refmap": "spamkiller.refmap.json"
+}

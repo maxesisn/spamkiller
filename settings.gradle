@@ -1,0 +1,26 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.namespace == 'org.gradle.sample') {
+                useModule('org.gradle.sample:sample-plugins:1.0.0')
+            }
+        }
+    }
+    repositories {
+        maven {
+            url 'maven-repo'
+        }
+        gradlePluginPortal()
+        maven {
+            url 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+        flatDir {
+            dirs 'lib'
+        }
+    }
+}
+
+plugins {
+    // Add toolchain resolver
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+}
